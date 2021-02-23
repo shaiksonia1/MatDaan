@@ -40,9 +40,6 @@
         android:layout_height="0dp"
         android:padding="14dp">
 
-        <!-- ROW 1  -->
-        <!-- COLUMN 1  -->
-
 
 
         <androidx.cardview.widget.CardView

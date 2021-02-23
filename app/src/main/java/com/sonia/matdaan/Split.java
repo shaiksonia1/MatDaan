@@ -1,4 +1,5 @@
 package com.sonia.matdaan;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -30,9 +31,15 @@ public class Split extends AppCompatActivity {
 // check selected menu item's id and replace a Fragment Accordingly
                 if (itemId == R.id.first) {
                     frag = new FirstFragment();
+                    Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                    startActivity(intent);
                 } else if (itemId == R.id.second) {
+                    Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                    startActivity(intent);
                     frag = new SecondFragment();
                 } else if (itemId == R.id.third) {
+                    Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                    startActivity(intent);
                     frag = new ThirdFragment();
                 }
 // display a toast message with menu item's title

@@ -11,14 +11,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        tools:node="merge"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Bjp"></activity>
+        android:theme="@style/AppTheme"
+        tools:node="merge">
+        <activity android:name=".Matdaan"></activity>
+        <activity android:name=".Bjp" />
         <activity android:name=".Dashboard" />
         <activity android:name=".Split" />
         <activity android:name=".verify" />
         <activity android:name=".Userinfo" />
-        <activity android:name=".create"></activity>
+        <activity android:name=".create" />
         <activity android:name=".cr2" />
         <activity android:name=".MainActivity">
             <intent-filter>

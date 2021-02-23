@@ -16,30 +16,18 @@
         android:src="@drawable/ic_baseline_account_circle_24"
         />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="345dp"
-        android:layout_height="539dp"
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/imgUserProfile"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="40dp"
-        android:foregroundGravity="right"
-        android:gravity="right"
-        android:orientation="vertical">>
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/listview1">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/poppins_bold"
-            android:gravity="center"
-            android:text="PROFILE"
-            android:textColor="#101010"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+    </ListView>
+<!--    <include layout="@layout/activity_split"-->
+<!--        android:id="@+id/split">-->
+
+<!--    </include>-->
 
 </RelativeLayout>
