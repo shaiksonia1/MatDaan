@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/yt"
+    android:background="#1F3C52"
     tools:context="mainpage">
 
 
@@ -20,19 +20,7 @@
         android:layout_below="@+id/imgUserProfile"
         android:layout_marginLeft="40dp">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="47dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/poppins_bold"
-            android:gravity="center"
-            android:text="Start Using App"
-            android:textColor="#101010"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-<!--        <EditText-->
+        <!--        <EditText-->
 <!--            android:id="@+id/aadhar"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="55dp"-->
@@ -46,6 +34,14 @@
 
 <!--            android:textSize="24sp"-->
 <!--            android:textStyle="bold" />-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rf"
+            android:layout_marginRight="100dp">
+
+        </ImageView>
+
 
 
         <EditText
@@ -54,7 +50,7 @@
             android:layout_height="55dp"
             android:layout_marginTop="30dp"
             android:ems="10"
-            android:background="@drawable/et_style"
+            android:background="@drawable/color"
             android:padding="10dp"
             android:hint="Phone number"
             android:inputType="textPersonName"
@@ -75,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:background="@drawable/et_create_button"
+            android:background="@drawable/color"
 
             android:text="Continue"
             android:textColor="#FDFDFD" />

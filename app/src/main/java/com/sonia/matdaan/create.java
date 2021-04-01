@@ -32,7 +32,7 @@ public class create extends AppCompatActivity {
     String sex = "";
     FirebaseAuth FirebaseAuth;
     private FirebaseDatabase db = FirebaseDatabase.getInstance();
-    private DatabaseReference root = db.getReference().child("Users_m");
+    private DatabaseReference root = db.getReference().child("Users");
     TextView tvNext;
     private FirebaseDatabase mAuth;
     FirebaseDatabase rootNode;
@@ -59,6 +59,7 @@ public class create extends AppCompatActivity {
 
         DatabaseReference = FirebaseDatabase.getInstance().getReference("gender");
         FirebaseAuth = FirebaseAuth.getInstance();
+        final String userID = FirebaseAuth.getCurrentUser().getUid();
 
         tvNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +92,8 @@ public class create extends AppCompatActivity {
                 userMap.put("mothersname" , Mothersname);
                 userMap.put("aadhar", Aadhar);
                 userMap.put("phone" , Phone);
-                root.setValue(userMap);
+                userMap.put("voted", "no");
+                root.child(userID).setValue(userMap);
 
                 Intent intent = new Intent(create.this, cr2.class);
                 startActivity(intent);

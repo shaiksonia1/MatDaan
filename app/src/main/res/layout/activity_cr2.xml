@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/yt"
+    android:background="#1F3C52"
     tools:context=".cr2">
 
     <LinearLayout
@@ -26,7 +26,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:hint="Address"
-            android:background="@drawable/et_style"
+            android:background="@drawable/color"
             android:padding="10dp"
             android:textColor="#101010"
             android:layout_marginTop="15dp"
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/et_style"
+            android:background="@drawable/color"
             android:ems="10"
             android:hint="Voter Id"
             android:inputType="textPersonName"
@@ -57,7 +57,7 @@
                android:hint="Business Profile"
                android:textSize="24dp"
                android:textStyle="bold"
-               android:background="@drawable/tv_style"/>
+               android:background="@drawable/color"/>
 
            <RadioGroup
                android:id="@+id/radioGroup1"
@@ -72,6 +72,7 @@
                    android:layout_height="22dp"
                    android:layout_marginTop="2dp"
                    android:text="Student"
+                   android:textColor="#ffff"
                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
 
@@ -80,6 +81,7 @@
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:text="Employee"
+                   android:textColor="#ffff"
                    android:layout_marginTop="2dp"
                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
            </RadioGroup>
@@ -94,11 +96,11 @@
             android:layout_height="55dp"
             android:layout_marginTop="40dp"
             android:text="Upload Photo"
-            android:textColor="#000000"
+            android:textColor="#fff"
             android:textSize="24sp"
             android:textStyle="bold"
             android:padding="10dp"
-            android:background="@drawable/tv_style"
+            android:background="@drawable/color"
             />
 
         <TextView
@@ -106,7 +108,7 @@
             android:layout_width="138dp"
             android:layout_height="55dp"
             android:layout_marginTop="40dp"
-            android:background="@drawable/et_create_button"
+            android:background="@drawable/color"
             android:fontFamily="@font/love_ya_like_a_sister"
             android:gravity="center"
             android:padding="10dp"

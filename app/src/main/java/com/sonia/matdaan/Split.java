@@ -2,6 +2,8 @@ package com.sonia.matdaan;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,11 +15,20 @@ import com.google.android.material.navigation.NavigationView;
 
 public class Split extends AppCompatActivity {
     DrawerLayout dLayout;
+    ImageView evm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_split);
         setNavigationDrawer(); // call method
+        evm=findViewById(R.id.evm);
+        evm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Parties.class));
+                //Toast.makeText(Dashboard.this, "clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     private void setNavigationDrawer() {
         dLayout = (DrawerLayout) findViewById(R.id.drawer_layout); // initiate a DrawerLayout
@@ -31,14 +42,14 @@ public class Split extends AppCompatActivity {
 // check selected menu item's id and replace a Fragment Accordingly
                 if (itemId == R.id.first) {
                     frag = new FirstFragment();
-                    Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                    Intent intent = new Intent(Split.this, FirstFragment.class);
                     startActivity(intent);
                 } else if (itemId == R.id.second) {
-                    Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                    Intent intent = new Intent(Split.this, SecondFragment.class);
                     startActivity(intent);
                     frag = new SecondFragment();
                 } else if (itemId == R.id.third) {
-                    Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                    Intent intent = new Intent(Split.this, ThirdFragment.class);
                     startActivity(intent);
                     frag = new ThirdFragment();
                 }
@@ -46,7 +57,7 @@ public class Split extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), menuItem.getTitle(), Toast.LENGTH_SHORT).show();
                 if (frag != null) {
                     FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.frame, frag); // replace a Fragment with Frame Layout
+//                    transaction.replace(R.id.frame, frag); // replace a Fragment with Frame Layout
                     transaction.commit(); // commit the changes
                     dLayout.closeDrawers(); // close the all open Drawer Views
                     return true;

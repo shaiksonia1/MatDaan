@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.sonia.matdaan.ThirdFragment">
-   <include layout="@layout/activity_dashboard"
+   <include layout="@layout/activity_dashboard1"
        android:id="@+id/dashboard">
    </include>
 </FrameLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/yt"
+    android:background="#1F3C52"
     tools:context=".create">
 
     <ImageView
@@ -23,7 +23,7 @@
         android:layout_below="@+id/imgUserProfile"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="-34dp"
+        android:layout_marginTop="-52dp"
         android:layout_marginEnd="40dp"
         android:foregroundGravity="right"
         android:gravity="right"
@@ -32,31 +32,21 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="47dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/poppins_bold"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/gentium_book_basic_bold"
             android:gravity="center"
-            android:text="hey! "
-            android:textColor="#101010"
+            android:text="HELLO THERE! "
+            android:textColor="#fff"
             android:textSize="30sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/poppins_bold"
-            android:gravity="center"
-            android:text="NEW USER"
-            android:textColor="#101010"
-            android:textSize="30sp"
-            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/reg_Name"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/et_style"
+            android:background="@drawable/color"
             android:ems="10"
             android:hint="Name"
             android:inputType="textPersonName"
@@ -71,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="11dp"
-            android:background="@drawable/et_style"
+            android:background="@drawable/color"
             android:ems="10"
             android:hint="Father's name"
             android:inputType="textPersonName"
@@ -84,7 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="11dp"
-            android:background="@drawable/et_style"
+            android:background="@drawable/color"
             android:ems="10"
             android:hint="Mother's Name"
             android:inputType="textPersonName"
@@ -97,28 +87,28 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="11dp"
-            android:background="@drawable/et_style"
+            android:background="@drawable/color"
             android:ems="10"
-            android:inputType="number"
+            android:inputType="textPersonName"
             android:padding="10dp"
+            android:hint="Aadhar Number"
             android:textColor="#0B0A0A"
             android:textSize="24sp"
-            android:textStyle="bold"
-            tools:hint="Aadhar Number" />
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="11dp"
-            android:background="@drawable/et_style"
+            android:background="@drawable/color"
             android:ems="10"
-            android:inputType="number"
+            android:inputType="textPersonName"
             android:padding="10dp"
+            android:hint="Phone number"
             android:textColor="#0B0A0A"
             android:textSize="24sp"
-            android:textStyle="bold"
-            tools:hint="Phone number" />
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -134,11 +124,11 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/tv_style"
+                android:background="@drawable/color"
                 android:padding="15dp"
                 android:text="sex"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="#1B1919"
+                android:textColor="#ffff"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -156,6 +146,7 @@
                     android:layout_marginTop="2dp"
                     android:checked="true"
                     android:text="Male"
+                    android:textColor="#fff"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                 <RadioButton
@@ -163,6 +154,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="22dp"
                     android:layout_marginTop="2dp"
+                    android:textColor="#ffff"
                     android:text="Female"
 
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -173,6 +165,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:text="Others"
+                    android:textColor="#ffff"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
             </RadioGroup>
         </LinearLayout>
@@ -185,7 +178,7 @@
             android:layout_marginRight="15dp"
             android:fontFamily="@font/poppins_bold"
             android:text="Next"
-            android:textColor="#000000"
+            android:textColor="#ffff"
             android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>

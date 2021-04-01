@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/yt"
+    android:background="#1F3C52"
     tools:context=".verify">
 
     <LinearLayout
@@ -23,11 +23,11 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="47dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="90dp"
             android:fontFamily="@font/righteous"
             android:gravity="center"
             android:text="Verification Code"
-            android:textColor="#101010"
+            android:textColor="#ffff"
             android:textSize="40dp"
             android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
             android:layout_marginTop="100dp"
             android:gravity="center"
             android:text="please type the verification  code sent to your number"
-            android:textColor="#000000"
+            android:textColor="#ffff"
             android:textSize="20sp" />
         <EditText
             android:id="@+id/editTextCode"
@@ -47,7 +47,7 @@
             android:layout_height="55dp"
             android:layout_marginTop="30dp"
             android:gravity="center"
-            android:background="@drawable/et_style"
+            android:background="@drawable/color"
             android:ems="10"
             android:hint="__ __ __ __ __ __"
             android:inputType="number"
@@ -64,7 +64,7 @@
         android:layout_width="138dp"
         android:layout_height="62dp"
         android:layout_marginBottom="100dp"
-        android:background="@drawable/et_create_button"
+        android:background="@drawable/color"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:padding="10dp"

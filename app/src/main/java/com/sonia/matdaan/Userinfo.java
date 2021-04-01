@@ -2,16 +2,27 @@ package com.sonia.matdaan;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
@@ -35,26 +46,53 @@ public class Userinfo extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
+    private Button btnGoTODash;
 
 
     ListView mylistview;
-
+DrawerLayout dLayout;
     ArrayList<String> myArrayList = new ArrayList<>();
 
     DatabaseReference mRef;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userinfo);
 
+        user =  FirebaseAuth.getInstance().getCurrentUser();
+        userID = user.getUid();
 
 
-        final ArrayAdapter<String> myArrayAdapter = new ArrayAdapter<String>(Userinfo.this,android.R.layout.simple_list_item_1,myArrayList);
+
+        btnGoTODash = findViewById(R.id.btnGoDash);
+        btnGoTODash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent intent = new Intent(Userinfo.this,Dashboard1.class);
+               startActivity(intent);
+            }
+        });
+
+
+        final ArrayAdapter<String> myArrayAdapter = new ArrayAdapter<String>(Userinfo.this,android.R.layout.simple_list_item_1,myArrayList){
+            @NonNull
+            @Override
+            public View getView(int position, @androidx.annotation.Nullable View convertView, @NonNull ViewGroup parent) {
+                TextView item = (TextView) super.getView(position, convertView, parent);
+                item.setTypeface(item.getTypeface(), Typeface.BOLD);
+
+                return item;
+
+
+            };
+        };
         mylistview = (ListView) findViewById(R.id.listview1);
 
         mylistview.setAdapter(myArrayAdapter);
-        mRef = FirebaseDatabase.getInstance().getReference().child("Users_m");
+        Log.d("USERR", "onCreate: "+userID);
+        mRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
 
         mRef.addChildEventListener(new ChildEventListener() {
             @Override
@@ -161,5 +199,13 @@ public class Userinfo extends AppCompatActivity {
 //
 //
 
+    }
+
+
+    public void signOut(View view) {
+
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        finish();
     }
 }
